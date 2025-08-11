@@ -1,26 +1,51 @@
-function createBook(title, author) {
-  return {
-    title,
-    author,
-    getDescription() {
-      return `${title} by ${author}`;
-    },
-  };
-}
 
-const book1 = createBook("1984", "George Orwell");
-console.log(book1.getDescription()); // Output: "1984 by George Orwell"
 
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
+class LinkedList {
+  append(value){
+    const newNode = new Node(value);
   }
 
-  getDescription() {
-    return `${this.title} by ${this.author}`;
+  prepend(value){
+
+  }
+
+  size(){
+
+  }
+
+  head(){
+
+  }
+
+  tail(){
+
+  }
+
+  at(index){
+
+  }
+
+  pop(){
+
+  }
+
+  contains(value){
+
+  }
+
+  find(value){
+
+  }
+
+  toString(){
+
   }
 }
 
-const book1 = new Book("1984", "George Orwell");
-console.log(book1.getDescription()); // Output: "1984 by George Orwell"
+class Node {
+  constructor(value){
+    this.value = null;
+    this.nextNode = null;
+  }
+}
+
