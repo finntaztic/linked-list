@@ -1,19 +1,27 @@
-console.log('index.js started');
+
+class Node {
+  //this is to create a new node
+  constructor(value = null, nextNode = null){
+    this.value = value;
+    this.nextNode = nextNode;
+  }
+}
+
 
 class LinkedList {
 
-  //add value to the head of the list
+  //add value to the end of the list
   append(value){
-    const newNode = new Node(value);
-    newNode.next = this.head;
-    this.head = newNode;
-console.log('hello');
-
+     const newNode = new Node(value);
+        newNode.next = head;
+        return newNode
   }
 
-  
+  //add value to the head of the list
   prepend(value){
-
+    const newNode = new Node(value);
+        newNode.next = head;
+        return newNode
   }
 
   size(){
@@ -49,14 +57,7 @@ console.log('hello');
   }
 }
 
-class Node {
 
-  //this is to create a new node
-  constructor(value){
-    this.value = null;
-    this.nextNode = null;
-  }
-}
 
 
 export { LinkedList }

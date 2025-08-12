@@ -1,6 +1,4 @@
-import { LinkedList } from "index.js";
-
-console.log('index.js started');
+import { LinkedList } from "./index.js";
 
 const list = new LinkedList();
 
