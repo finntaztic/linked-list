@@ -29,8 +29,11 @@ class LinkedList {
 
   //adds a new node containing value to the start of the list
   prepend(value){
-    
+    let newNode = new Node(value);
+    newNode.next = this.head; //this points the new node to existing head next
+    this.head = newNode; //this makes the new node the head of the list
   }
+  
   toString(){
     let current = this.head
     let result = ""
