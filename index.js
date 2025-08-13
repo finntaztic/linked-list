@@ -10,7 +10,7 @@ class Node {
 class LinkedList {
   //add value to the end of the list
   constructor(){
-    this.head=null
+    this.head = null
   }
 
   append(value){
@@ -33,10 +33,10 @@ class LinkedList {
     newNode.next = this.head; //this points the new node to existing head next
     this.head = newNode; //this makes the new node the head of the list
   }
-  
+
   toString(){
     let current = this.head
-    let result = ""
+    let result = ("");
     while(current){
       result += current.value + '->'
       current = current.next
@@ -44,21 +44,21 @@ class LinkedList {
     return result + 'null'
   }
 
+  size(){
+    let count = 0;
+    let current = this.head;
 
-  // add value to the head of the list
-  // prepend(value){
-  //   const newNode = new Node(value);
-  //       newNode.next = head;
-  //       return newNode
-  // }
+    while (current){
+      // console.log(count)
+      count++
+      current = current.next;
+    }
+    return count;
+  }
 
-  // size(){
+  head(){
 
-  // }
-
-  // head(){
-
-  // }
+  }
 
   // tail(){
 
