@@ -8,6 +8,18 @@ list.append("parrot");
 list.append("hamster");
 list.append("snake");
 list.append("turtle");
-list.prepend("snake");
+list.pop();
 console.log(list.toString()); //working
-console.log(list.size());//working
+// console.log(list.contains('mango'))
+// console.log(list.size());//working
+// console.log(list.headNode());
+// console.log(list.tailNode());
+// console.log(list.at(2));
+
+
+
+
+
+// list.head();
+// console.log(list.head());
+
