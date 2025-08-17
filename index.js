@@ -88,43 +88,42 @@ class LinkedList {
     while(current){ //current.value !== 'empty'
         result += current.value + '->'
         current = current.next
-    }
+    } 
     return result + 'null'
   }
 
   //returns true if the passed in value is in the list and otherwise returns false.
 
-  contains(value){
+  contains(string){
     let current = this.head;
-    
-    while (current.value != value){
+
+    while (current.value != string && current.next != null){ //without the current.next != null, the current.value becomes an error cos it cant interpret the null
       current = current.next;
-      return false;
-    } return true;
+    } 
+    if (current.value != string){
+        return false
+      } 
+    return true
   }
 
+
+  //find(value) returns the index of the node containing value, or null if not found.
+
+  find(value){
+    let current = this.head;
+
+    while (current.value != value && current.next != null){
+      current = current.next
+    }
+    if (current.value != value){
+      return null;
+    }
+    else return current.value;
   }
+
 
   
-
-
-  // pop(){
-
-  // }
-
-  // contains(value){
-
-  // }
-
-  // find(value){
-
-  // }
-
-  // toString(){
-
-  // }
-
-
+  }
 
 
 

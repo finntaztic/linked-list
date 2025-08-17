@@ -8,9 +8,11 @@ list.append("parrot");
 list.append("hamster");
 list.append("snake");
 list.append("turtle");
-console.log(list.pop())
-console.log(list.toString()); //working
-console.log(list.contains('turtle'))
+// console.log(list.pop())
+// console.log(list.toString()); //working
+// console.log(list.contains('cat'))
+console.log(list.find('no'))
+
 // console.log(list.size());//working
 // console.log(list.headNode());
 // console.log(list.tailNode());
