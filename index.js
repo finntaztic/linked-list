@@ -34,17 +34,6 @@ class LinkedList {
     this.head = newNode; //this makes the new node the head of the list
   }
 
-  toString(){
-    let current = this.head
-    let result = "";
-    console.log(current.value)
-    while(current.value !== 'empty'){
-        result += current.value + '->'
-        current = current.next
-    }
-    return result + 'null'
-  }
-
   size(){
     let count = 0;
     let current = this.head;
@@ -84,14 +73,23 @@ class LinkedList {
 
   //this part maybe make the second to the last element equals to null? 
 
-  pop (){
+  pop(){
     let current = this.head
 
-    while(current.next != null){
+    while(current.next.next !== null){
       current = current.next
-      // console.log(current)
     }
-    return current.value = 'empty';
+    return current.next = null; //current points to 2nd to the last node, then we put null to its next node value
+  }
+
+  toString(){
+    let current = this.head
+    let result = "";
+    while(current){ //current.value !== 'empty'
+        result += current.value + '->'
+        current = current.next
+    }
+    return result + 'null'
   }
 
   //returns true if the passed in value is in the list and otherwise returns false.
@@ -99,12 +97,11 @@ class LinkedList {
   contains(value){
     let current = this.head;
     
-    while (current.value !== value){
+    while (current.value != value){
       current = current.next;
       return false;
     } return true;
   }
-
 
   }
 

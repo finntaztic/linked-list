@@ -8,9 +8,9 @@ list.append("parrot");
 list.append("hamster");
 list.append("snake");
 list.append("turtle");
-list.pop();
+console.log(list.pop())
 console.log(list.toString()); //working
-// console.log(list.contains('mango'))
+console.log(list.contains('turtle'))
 // console.log(list.size());//working
 // console.log(list.headNode());
 // console.log(list.tailNode());
